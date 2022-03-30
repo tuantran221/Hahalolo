@@ -1,0 +1,137 @@
+.main_frame_login {
+  height: 950px;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  justify-content: center;
+  justify-self: center;
+  margin: 0px;
+  @include mobile {
+    margin-bottom: -100px;
+  }
+
+  .Top_frame {
+    height: 600px;
+    width: 100%;
+    background-color: #f0f4fa;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+  }
+
+  .sub_Frame {
+    height: 600px;
+    width: 70%;
+    background-color: #f0f4fa;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    text-align: center;
+    margin: 0px;
+  }
+  .main_paper {
+    height: 650px;
+    background-color: white;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    display: flex;
+    margin-top: 70px;
+    border-radius: 20px;
+    @include mobile {
+      border-radius: 20px;
+      border-width: 1px;
+    }
+
+    .frame_button_connect {
+      width: 400px;
+      // background-color: red;
+      height: 600px;
+      margin-top: 10px;
+
+      @include mobile {
+        width: 200px;
+      }
+      .button_login{
+
+        background-color: #035BDE;
+        border-radius: 30px;
+        height: 45px;
+        color: white;
+        text-transform: capitalize;
+        margin-Bottom: 30px;
+      
+      }
+
+      .button_login:hover{
+
+        color: black;
+        background-color: #f0f4fa;
+      }
+      
+      .button1 {
+        background-color: #f0f4fa;
+        width: 400px;
+        height: 50px;
+        justify-content: left;
+        margin-top: 7%;
+        text-transform: capitalize;
+        border-radius: 10px;
+
+        @include mobile {
+          width: 200px;
+        }
+      }
+      .button2 {
+        background-color: #f0f4fa;
+        width: 400px;
+        height: 50px;
+        justify-content: left;
+        margin-top: 3%;
+        text-transform: capitalize;
+        border-radius: 10px;
+
+        @include mobile {
+          width: 200px;
+        }
+      }
+      .inputtextcricle {
+        fieldset {
+          border-radius: 50px;
+          border-color: gray;
+        }
+
+        @include mobile {
+          width: 200px;
+          justify-content: center;
+          justify-items: center;
+          justify-self: center;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.text_in_button {
+  color: black;
+  padding-left: 28%;
+  @include mobile {
+    padding-left: 11%;
+  }
+}
+
+.text_in_button1 {
+  color: black;
+  padding-left: 28%;
+  @include mobile {
+    padding-left: 7%;
+  }
+}
+
+
+

@@ -1,0 +1,253 @@
+.main_frame_Postdetails {
+  @include tablet {
+    margin-top: -30px;
+  }
+
+  .underline_postdetail{
+    width: 50%;
+    height: 1px;
+    margin-top: 20px;
+    background-color: gray;
+    border: none;
+    @include mobile {
+      width: 97%;
+    }
+  }
+  .frame_Top_gallary {
+    padding: 5%;
+    @include mobile {
+      padding-top: 20%;
+      padding-left: 10%;
+    }
+    .frame_title_postdetail {
+      width: 400px;
+      @include mobile {
+        width: 70%;
+        // background-color: tan;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+      }
+    }
+
+    .button_gallary {
+      background-color: #f6e6e3;
+      color: #a61602;
+      border-radius: 20px;
+      height: 30px;
+      width: 100px;
+    }
+
+    .button_gallary:hover {
+      background-color: #71066c;
+      color: white;
+    }
+    .button_gallary2 {
+      background-color: #ede1ef;
+      color: #511912;
+      border-radius: 20px;
+      height: 30px;
+      width: 100px;
+      margin-left: 1%;
+    }
+
+    .button_gallary2:hover {
+      background-color: #a51603;
+      color: white;
+    }
+
+
+    // css title desktop
+    .text_title_postdetail {
+      margin-top: 30px;
+      color: white;
+      font-size: 30px;
+
+      @include mobile {
+        font-size: 19px;
+      }
+    }
+    .frame_IconbuttonRight {
+      display: flex;
+
+      @include mobile {
+        display: block;
+      }
+
+      .button_favorite {
+        background-color: #e5e7eb;
+        border-radius: 20px;
+        color: red;
+      }
+      .button_chat {
+        background-color: #e5e7eb;
+        border-radius: 20px;
+        color: black;
+      }
+      .button_chat:hover {
+        background-color: #a3f9df;
+      }
+    }
+  }
+
+  .frame_linear {
+    .linear {
+      @include mobile {
+        width: 100%;
+      }
+    }
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  .taskbar {
+
+    background-color: #0C0808;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    margin-top: 55px;
+
+    @include mobile {
+      width: 100%;
+    }
+    .frame_elemet_taskbar {
+
+
+    
+     
+      .title_taskbar {
+        color: white;
+        font-size: 20px;
+        padding-top: 8px;
+        margin-left: 20px;
+        @include mobile {
+          font-size: 8px;
+          margin-left: 0px;
+          display: none;
+          
+
+        }
+        @include tablet{
+          font-size: 15px;
+          // background-color: #a3f9df;
+          width: 325px;
+        }
+        
+      }
+      width: 700px;
+      // background-color: tan;
+      @include mobile {
+        width: 100px;
+        display: none;
+      }
+      @include tablet {
+        // display: none;
+        width: 150px;
+        
+        
+        
+      }
+      
+    }
+  }
+
+  .frame_button_right {
+    width: 400px;
+    text-align: right;
+    justify-content: right;
+
+    // padding-left: 20%;
+
+    @include mobile {
+      width: 340px;
+      text-align: left;
+      justify-content: left;
+      margin-left: -60px;
+      margin-top: 8%;
+    }
+
+    .button_favorite {
+      background-color: #e5e7eb;
+      color: red;
+      border-radius: 20px;
+      width: 80px;
+      @include mobile {
+        width: 50px;
+        // height: 30px;
+        margin-left: 6px;
+        margin-top: 0px;
+        margin-right: -7px;
+      }
+    }
+    .icon_favorite {
+      color: red;
+    }
+
+    .button_chat {
+      background-color: #e5e7eb;
+      color: black;
+      border-radius: 20px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .icon_chat {
+      color: black;
+    }
+
+    .button_chat:hover {
+      background-color: #a3f9df;
+    }
+
+    .Button_share {
+      margin-left: 1%;
+     
+    }
+
+    .Button_share:hover {
+      background-color: rgba(212, 248, 255, 0.1);
+    }
+
+    .menuhover:hover {
+      background-color: #a61602;
+      color: #a3f9df;
+    }
+
+    .Button_save:hover {
+      background-color: whitesmoke;
+      color: black;
+    }
+
+    .icon_save:hover {
+      color: black;
+    }
+  }
+  .Button_share1 {
+    @include mobile {
+      display: none;
+    }
+  }
+  .Button_share{
+    background-color: rgba(212, 248, 255, 0.1);
+    margin-right: 10px;
+    width: 40px;
+}
+
+.button_favorite1 {
+  background-color: #e5e7eb;
+  color: red;
+  border-radius: 20px;
+  width: 80px;
+  
+  @include mobile {
+    width: 50px;
+    
+    display: none;
+  }
+}
+}

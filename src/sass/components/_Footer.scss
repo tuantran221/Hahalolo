@@ -1,0 +1,94 @@
+.footer {
+    // padding: 70px 0;
+    box-shadow: $box-shadow;
+    font-size: 1.1rem;
+    width: vh;
+  
+    
+   
+    
+.test{
+    margin-bottom: 70px;
+    
+   
+   
+    position: relative;
+    margin-left: -400px;
+    margin-top: 10%;
+
+    @include mobile{
+        margin-left: 0px;
+        margin-top: 0px;
+
+    }
+    @include tablet{
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+}
+
+
+
+
+
+}
+
+
+.txt{
+    color:gray;
+    font-family: "Roboto";
+    
+   
+   
+}
+.txt:hover{
+    color: black;
+}
+
+.box_Icon{
+    display: flex;
+}
+
+.textIcon{
+
+    @include mobile{
+        display: none;
+    }
+    @include tablet {
+        display: none;
+    }
+}
+
+.Icon{
+
+    
+    @include tablet{
+        display: flex;
+    }
+    @include mobile{
+        display: flex;
+    }
+}
+
+.frame_IconText{
+    margin-left: 100px;
+    @include mobile{
+        margin-left: 0px;
+
+    }
+    @include tablet {
+        margin-left: 0px;
+    }
+}
+
+.text_Logo{
+
+    padding-left: 15%;
+    @include mobile{
+        padding-left: 20px;
+    }
+}
+
+.frame_Sigin{
+    margin-left: 200px;
+}
