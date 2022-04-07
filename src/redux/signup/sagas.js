@@ -7,7 +7,7 @@ import {
 } from './constants'
 
 // The url derived from our .env file
-const signupUrl = `${process.env.REACT_APP_API_URL}/api/Clients`
+const signupUrl = `http://localhost:3000/auth/register`
 
 function signupApi (email, password) {
   // call to the "fetch".  this is a "native" function for browsers

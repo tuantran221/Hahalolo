@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react'
-import logo from './logo.svg'
+// import logo from './logo.svg'
 import './App.css'
 
 const App = props => (
   <div className="App">
-    <div className="App-header">
+    {/* <div className="App-header">
       <img src={logo} className="App-logo" alt="logo" />
       <h2>Welcome to Widget Reactory</h2>
-    </div>
+    </div> */}
     <section className="App-body">
       {props.children}
     </section>

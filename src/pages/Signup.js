@@ -2,11 +2,10 @@ import React, { Component, PropTypes } from 'react'
 import { reduxForm, Field } from 'redux-form'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import Messages from '../redux/notifications/Messages'
+import Errors from '../redux/notifications/Errors'
+import signupRequest from '../redux/signup/actions'
 
-import Messages from '../notifications/Messages'
-import Errors from '../notifications/Errors'
-
-import signupRequest from './actions'
 
 class Signup extends Component {
   // Pass the correct proptypes in for validation

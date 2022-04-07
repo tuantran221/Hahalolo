@@ -54,25 +54,25 @@ export function checkIndexAuthorization ({ dispatch }) {
   }
 }
 
-export function checkWidgetAuthorization ({ dispatch, getState }) {
-  // Same format - we do this to have the Redux State available.
-  // The difference is that this time we also pull in the helper
-  // `getState` which will allow us to.....
-  // ....
-  // get the state.
-  //
-  return (nextState, replace, next) => {
-    // reference to the `client` piece of state
-    const client = getState().client
+// export function checkWidgetAuthorization ({ dispatch, getState }) {
+//   // Same format - we do this to have the Redux State available.
+//   // The difference is that this time we also pull in the helper
+//   // `getState` which will allow us to.....
+//   // ....
+//   // get the state.
+//   //
+//   return (nextState, replace, next) => {
+//     // reference to the `client` piece of state
+//     const client = getState().client
 
-    // is it defined and does it have a token? good, go ahead to widgets
-    if (client && client.token) return next()
+//     // is it defined and does it have a token? good, go ahead to widgets
+//     if (client && client.token) return next()
 
-    // not set yet?  Let's try and set it and if so, go ahead to widgets
-    if (checkAuthorization(dispatch)) return next()
+//     // not set yet?  Let's try and set it and if so, go ahead to widgets
+//     if (checkAuthorization(dispatch)) return next()
 
-    // nope?  okay back to login ya go.
-    replace('login')
-    return next()
-  }
-}
+//     // nope?  okay back to login ya go.
+//     replace('login')
+//     return next()
+//   }
+// }
