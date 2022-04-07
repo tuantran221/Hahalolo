@@ -1,0 +1,66 @@
+
+.main_frame_trending_topic{
+    // background-color: aqua;
+    width: 90%;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    justify-self: center;
+    margin: auto;
+    padding-top: 70px !important;
+
+
+     .title_trending_topics{
+        text-align: center;
+        font-size: 30px;
+        font-weight: 900;
+    }
+    .title_trending_topics1{
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .frame_element_trending_topics{
+        margin-top: 90px;
+
+        .Paper_element_trending_topics{
+          height: 250px;  
+        //   width: 300px;
+          border-radius: 20px;
+
+          .frame_avatar_element_trending_topics{
+              padding-top: 20%;
+
+            .avatar_element_trending_topics{
+                height: 80px;
+                width: 80px;
+                justify-content: center;
+                margin: auto;
+                justify-items: center;
+                justify-self: center;
+                text-align: center;
+                
+            }
+
+          }
+
+          .frame_title_topic_avatar{
+              margin-top: 6%;
+
+              .first_title_avatar_topic{
+                  font-size: 20px;
+                  font-weight: 600;
+
+              }
+          }
+
+          
+        }
+
+        .Paper_element_trending_topics:hover{
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+
+}

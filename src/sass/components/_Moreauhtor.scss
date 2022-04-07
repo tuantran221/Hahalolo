@@ -1,0 +1,116 @@
+
+.main_paper_more_author1{
+    height: 430px;
+    
+    margin-top: 20px;
+    cursor: pointer;
+    // background-size: 200px;
+    
+    // background-size: contain;
+    background-size: cover;
+    background-position: center;
+
+
+    .active_button_moreauthor{
+        display: none;
+        padding-top: 16px;
+        height: 100px;
+        // background-color: aqua;
+
+        
+    }
+
+
+    .active_button_moreauthor2{
+        // display: none;
+        padding-top: 16px;
+        height: 100px;
+        // background-color: aqua;
+
+        
+    }
+   
+
+    .img_more_author{
+        height: 100%;
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        // background-image: url("./src/asset/Kevin_De_Bruyne.jpg");
+       
+    }
+    .frame_avatar_title_related_post{
+        display: flex;
+        margin:20px ;
+
+        .frame_avatar_related_post{
+            height: 30px;
+            width: 31px;
+            margin-top: -10px;
+            background-size: cover;
+        }
+
+        .frame_title_related_post{
+            padding-left: 15px;
+            margin-top: -5px;
+
+        }
+    }
+
+   
+      
+
+    .content_related_post1{
+        font-size: 22px;
+        margin-left: 20px;
+        color: white;
+        
+        
+      
+        
+    }
+    .frame_two_button_left_related_post{
+        width: 75%;
+        margin-left: 20px;
+        // background-color: aquamarine;
+
+
+
+        .button_favorite_related_post{
+            background-color:#F5F5F5 ;
+            color: black;
+            border-radius: 20px;
+        }
+
+        .button_favorite_related_post1{
+            background-color:#F5F5F5 ;
+            color: black;
+            border-radius: 20px;
+            margin-left: 20px;
+        }
+        .button_favorite_related_post1:hover{
+            background-color: aquamarine;
+        }
+        .button_favorite_related_post:hover{
+            background-color: #F56767;
+        }
+    }
+
+}
+
+
+.main_paper_more_author1:hover > .active_button_moreauthor{
+    display: block;
+    margin-top: 20px;
+
+    
+}
+
+
+
+.main_paper_more_author1:hover > .active_button_moreauthor2{
+    display: none;
+    margin-top: 20px;
+
+    
+}

@@ -13,8 +13,8 @@ const Routes = () => {
       <Route path="/login"  component={Login}/>
       <Route path="/SignUp"  component={SignUp}/>
       <Route path="/Forgotpass"  component={Forgotpass}/>
-      {/* <Route path="/" exact component={Home}/> */}
-      <Route path="/" exact component={Postdetail}/>
+      <Route path="/" exact component={Home}/>
+      <Route path="/Postdetail" exact component={Postdetail}/>
     </Switch>
   );
 };

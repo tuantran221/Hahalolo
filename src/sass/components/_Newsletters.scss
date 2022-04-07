@@ -1,0 +1,109 @@
+.main_frame_newsletters{
+    margin-top: 50px;
+    width: 95%;
+    // background-color: beige;
+    min-height: 50px;
+    margin: auto;
+
+
+    .frame_left_element_newsletters{
+        // background-color: blue;
+        justify-items: center;
+        text-align: center;
+        margin-top: 50px;
+
+
+
+        .title_newsletters{
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+
+        .sub_title_Newsletters{
+            font-size: 15px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: 300;
+        }
+
+
+        .frame_01_title{
+
+            margin-left: 13%;
+            display: flex;
+
+            .button_newsletters{
+                background-color: #2DBAF6;
+                color: blue;
+                border-radius: 20px;
+                height: 20px;
+                width: 50px ;
+                margin-right: 20px;
+                margin-top: 5px;
+                
+                
+            }
+
+            .button_newsletters1{
+                background-color: #F2BFBF;
+                color: #DF1919;
+                border-radius: 20px;
+                height: 20px;
+                width: 50px ;
+                margin-right: 20px;
+                margin-top: 5px;
+                
+                
+            }
+
+           
+
+            .title_01_newsletters{
+                font-size: 20px;
+                font-weight: 400;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+                @include mobile {
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+       
+       
+    }
+
+
+
+
+
+    .style_img_newsletter{
+        height: 450px;
+        width: 600px;
+
+        @include tablet {
+            margin-left: 10%;
+        }
+
+        @include mobile{
+            height: 250px;
+            width: 300px;
+            margin-left: 0px;
+            
+        }
+    }
+}
+
+
+.text_field{
+
+    width: 470px !important;
+      height: 50px !important;
+
+@include mobile{
+    width: 100% !important;
+    margin-left: 10%;
+}
+
+}

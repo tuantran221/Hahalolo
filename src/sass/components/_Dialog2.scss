@@ -1,0 +1,63 @@
+
+@media (max-width: 740px) {
+
+    .frame_paper_dialog1{
+        min-width: 200px;
+    }
+    
+}
+
+
+.frame_paper_dialog1{
+
+    min-width: 900px;
+    max-height: 500px;
+    
+    @include tablet{
+        min-width: 500px;
+    }
+    
+    @include mobile {
+        min-width: 200px !important;
+    }
+    
+
+    .title_dialogtitle1{
+    
+ 
+        padding-left: 36%;
+        margin-top:-30px !important;
+        font-size: 20px !important;
+        font-weight: 600 !important;
+        @include mobile{
+            font-size: 10px !important;
+            margin-top: -24px !important;
+            padding-left: 32%;
+        }
+    }
+
+    .frame_button_element_dialog{
+
+        // margin-top: 10px;
+        flex-wrap: wrap;
+
+       
+        
+
+    }
+    .button_dialog_element{
+        background-color: white;
+        color: #000;
+        border: 1px solid #E5E9E8;
+        margin-left: 20px;
+        border-radius: 7px;
+        margin-top: 10px;
+
+    }
+
+   
+    
+    
+
+}
+

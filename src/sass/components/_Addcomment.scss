@@ -1,0 +1,52 @@
+
+
+
+.frame_comment{
+    display: flex;
+    margin: 20px;
+    
+    .img_avatar_comment{
+      height: 80px;
+      width: 80px;
+      border-radius: 10px;
+  
+    }
+    .frame_title_comment{
+      width: 440px;
+      margin-left: 20px;
+      @include mobile {
+          width: 200px;
+      }
+      
+    }
+    .size_comment_title{
+      font-size: 15px;
+      @include mobile{
+          font-size: 10px;
+      }
+    }
+    
+  }
+  
+  .textarea_comment{
+    width: 950px;
+    margin-left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+   
+    @include tablet{
+        width: 95%;
+    }
+
+    @include mobile {
+      width: 90%;
+  }
+  
+  }
+  
+  .submit_button{
+    width: 50px;
+    border: 1px solid gray;
+   
+  }
+  

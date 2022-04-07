@@ -5,19 +5,14 @@ import Helmet from "../components/Helmet";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import avt from "../asset/avatar.jpg";
-import ImageList from "@mui/material/ImageList";
-import ImageListItem from "@mui/material/ImageListItem";
-import { height, textAlign } from "@mui/system";
+
 import {
   Button,
-  CardMedia,
   IconButton,
-  Image,
   LinearProgress,
   Typography,
   Popper,
   MenuItem,
-  Menu,
 } from "@mui/material";
 import useWindowScrollPositions from "../hooks/useWindowScrollPositions";
 import Avatar from "@mui/material/Avatar";
@@ -36,8 +31,16 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import MarkChatUnreadOutlinedIcon from "@mui/icons-material/MarkChatUnreadOutlined";
 import HideSourceIcon from "@mui/icons-material/HideSource";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
+import G from "../components/Grid";
+import View from "../components/View";
+import Body from "../components/Body";
+import Addcomment from "../components/Addcomment";
+import Comment from "../components/Comment";
+import Secondcomment from "../components/Secondcomment";
+import Related_posts from "../components/Related_posts";
+import Moreauthor from "../components/Moreauthor";
 
-const Postdetail= () => {
+const Postdetail = () => {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
@@ -79,10 +82,10 @@ const Postdetail= () => {
     setAnchorEl(null);
   };
   const open1 = Boolean(anchorEl1);
-// /------------------------------------------------------------------------------------------------------------------------------/ 
+  // /------------------------------------------------------------------------------------------------------------------------------/
   return (
     <Helmet title="Postdetail">
-      <div style={{ height: "2000px" }}>
+      <div className="main_post">
         <div className="main_frame_Postdetails">
           <Paper
             sx={{
@@ -100,10 +103,7 @@ const Postdetail= () => {
                   Quiet ingenuity: 120,000 lunches and counting
                 </Typography>
               </div>
-              <hr
-             
-                className="underline_postdetail"
-              />
+              <hr className="underline_postdetail" />
               <div style={{ marginTop: "2%" }}>
                 <Stack direction="row" spacing={2} sx={{ color: "white" }}>
                   <Avatar alt="Remy Sharp" src={avt} />
@@ -126,7 +126,7 @@ const Postdetail= () => {
                       |
                       <IconButton
                         className="Button_share"
-                        sx={{ backgroundColor: "rgba(212, 248, 255, 0.1)"  }}
+                        sx={{ backgroundColor: "rgba(212, 248, 255, 0.1)" }}
                         onClick={handleClick}
                       >
                         <ShareOutlinedIcon
@@ -139,16 +139,7 @@ const Postdetail= () => {
                         anchorEl={anchorEl}
                         sx={{ position: "absoluted" }}
                       >
-                        <Box
-                          sx={{
-                            border: 1,
-                            p: 1,
-                            backgroundColor: "white",
-                            width: "200px",
-                            marginTop: "10px",
-                            borderRadius: "10px",
-                          }}
-                        >
+                        <Box className="popper_box">
                           <MenuItem
                             sx={{ color: "black" }}
                             className="menuhover"
@@ -201,16 +192,7 @@ const Postdetail= () => {
                         />
                       </IconButton>
                       <Popper open={open1} anchorEl={anchorEl1}>
-                        <Box
-                          sx={{
-                            border: 1,
-                            p: 1,
-                            backgroundColor: "white",
-                            width: "200px",
-                            marginTop: "10px",
-                            borderRadius: "10px",
-                          }}
-                        >
+                        <Box className="popper_box">
                           <MenuItem
                             sx={{ color: "black" }}
                             className="menuhover"
@@ -266,9 +248,7 @@ const Postdetail= () => {
 
           <div
             style={{
-         
               display: scrollY > 400 ? "block" : "none",
-            
             }}
             className="taskbar"
           >
@@ -287,11 +267,11 @@ const Postdetail= () => {
                   Quiet ingenuity: 120,000 lunches and counting
                 </Typography>
               </div>
-              <Button className="button_favorite1" sx={{marginLeft:"15%"}} >
+              <Button className="button_favorite1" sx={{ marginLeft: "15%" }}>
                 <FavoriteIcon sx={{ color: "red" }} />
                 220
               </Button>
-              
+
               <IconButton className="Button_share1">
                 <ShareOutlinedIcon
                   sx={{ color: "white" }}
@@ -308,7 +288,7 @@ const Postdetail= () => {
                   className="icon_share"
                 />
               </IconButton>
-              
+
               <IconButton className="Button_share" onClick={handleClick1}>
                 <MoreHorizOutlinedIcon
                   sx={{ color: "white" }}
@@ -316,18 +296,13 @@ const Postdetail= () => {
                 />
               </IconButton>
 
-              <Typography sx={{color:"white",paddingTop:"3px",fontSize:"20px"}}>|</Typography>
+              <Typography
+                sx={{ color: "white", paddingTop: "3px", fontSize: "20px" }}
+              >
+                |
+              </Typography>
               <Popper open={open1} anchorEl={anchorEl1}>
-                <Box
-                  sx={{
-                    border: 1,
-                    p: 1,
-                    backgroundColor: "white",
-                    width: "250px",
-                    marginTop: "10px",
-                    borderRadius: "10px",
-                  }}
-                >
+                <Box className="popper_box">
                   <MenuItem sx={{ color: "black" }} className="menuhover">
                     <ContentCopyIcon />
                     <Typography sx={{ marginLeft: "30px" }}> Copy </Typography>
@@ -423,7 +398,40 @@ const Postdetail= () => {
             </div>
           </div>
 
-          <div style={{ marginTop: "600px" }}>chauhoaivu</div>
+          <div className="frame_main_body_postdetail">
+            <G col={2} smCol={1} mdCol={1} gap={10}>
+              <div className="frame_left_body">
+                <Body />
+
+                <Comment />
+                <Comment />
+                <Comment />
+
+                <Button className="button_full_comment">
+                  View Full comment (+117 comments){" "}
+                </Button>
+              </div>
+
+              <View />
+            </G>
+          </div>
+        </div>
+      </div>
+
+      <div className="frame_bottom_postdetail">
+        <Typography className="first_title_bottom">Related posts </Typography>
+
+        <div className="main_frame_element_bottom">
+          <Related_posts />
+
+          <div style={{ marginTop: "10%" }}>
+            {" "}
+            <Typography sx={{ fontSize: "30px", fontWeight: "600" }}>
+              More from author
+            </Typography>
+          </div>
+
+          <Moreauthor />
         </div>
       </div>
     </Helmet>

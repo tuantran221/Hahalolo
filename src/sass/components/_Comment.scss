@@ -1,0 +1,135 @@
+.main_frame_content_comment {
+  min-height: 100px;
+  margin: 20px;
+  width: 95%;
+  @include mobile{
+    width: 90%;
+    // background-color: aqua;
+    margin: auto;
+
+  }
+
+  .frame_sending {
+    display: flex;
+    //   background-color: aquamarine;
+    width: 94%;
+
+    @include tablet {
+      width: 90%;
+    }
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  .paper_content {
+    width: 90%;
+    margin-left: 20px;
+    @include tablet {
+      width: 85%;
+    }
+    @include mobile {
+      width: 75%;
+    }
+
+    .frame_name_more {
+      width: 870px;
+      // background-color: bisque;
+      display: flex;
+      margin-left: 20px;
+      @include tablet {
+        width: 95%;
+      }
+
+      @include mobile {
+        width: 95%;
+      }
+    }
+
+    .frame_name_more1 {
+      width: 820px;
+      // background-color: bisque;
+      display: flex;
+      margin-left: 20px;
+      @include tablet {
+        width: 90%;
+      }
+      @include mobile {
+        width: 82%;
+      }
+    }
+
+    .name_author_comment {
+      padding-top: 10px;
+      font-size: 13px;
+      width: 100%;
+      margin-left: 20px;
+    }
+
+    .name_author_comment1 {
+      font-size: 20px;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      @include mobile {
+        font-size: 13px;
+      }
+    }
+  }
+  .frame_text_reply_comment {
+    // background-color: aquamarine;
+    width: 870px;
+    margin-top: 20px;
+    @include tablet {
+      width: 100%;
+    }
+    @include mobile {
+      width: 100%;
+    }
+    .textarea_comment {
+      width: 820px;
+      margin-left: 20px;
+      padding: 20px;
+      border-radius: 10px;
+
+      @include tablet {
+        width: 95%;
+      }
+
+      @include mobile {
+        width: 85%;
+      }
+    }
+
+    .frame_button_cancle_submit_reply {
+      display: flex;
+    }
+  }
+
+  .frame_button_favorite_reply {
+    display: flex;
+    margin-left: 20px;
+  }
+  .button_favorite_comment {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  .button_favorite_comment1 {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 20px;
+    color: red;
+  }
+  .button_favorite_comment2 {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 20px;
+    color: black;
+  }
+  .button_favorite_comment3 {
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 20px;
+    color: white;
+    background-color: blue;
+  }
+}

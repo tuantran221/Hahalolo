@@ -1,433 +1,160 @@
-// import React from "react";
-// import { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
-// import Helmet from "../components/Helmet";
-// import Box from "@mui/material/Box";
-// import Paper from "@mui/material/Paper";
-// import avt from "../asset/avatar.jpg";
-// import ImageList from "@mui/material/ImageList";
-// import ImageListItem from "@mui/material/ImageListItem";
-// import { height, textAlign } from "@mui/system";
-// import {
-//   Button,
-//   CardMedia,
-//   IconButton,
-//   Image,
-//   LinearProgress,
-//   Typography,
-//   Popper,
-//   MenuItem,
-//   Menu,
-// } from "@mui/material";
-// import useWindowScrollPositions from "../hooks/useWindowScrollPositions";
-// import Avatar from "@mui/material/Avatar";
-// import Stack from "@mui/material/Stack";
-// import FavoriteIcon from "@mui/icons-material/Favorite";
-// import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
-// import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
-// import BookmarkAddedOutlinedIcon from "@mui/icons-material/BookmarkAddedOutlined";
-// import im from "../asset/background.png";
-// import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
-// import Instagram from "@mui/icons-material/Instagram";
-// import YouTube from "@mui/icons-material/YouTube";
-// import Twitter from "@mui/icons-material/Twitter";
-// import FacebookIcon from "@mui/icons-material/Facebook";
-// import ContentCopyIcon from "@mui/icons-material/ContentCopy";
-// import MarkChatUnreadOutlinedIcon from "@mui/icons-material/MarkChatUnreadOutlined";
-// import HideSourceIcon from "@mui/icons-material/HideSource";
-// import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
+import Helmet from "../components/Helmet";
+import Box from "@mui/material/Box";
+import Paper from "@mui/material/Paper";
+import avt from "../asset/avatar.jpg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-// const Home = () => {
-//   const [progress, setProgress] = React.useState(0);
+import {
+  Button,
+  IconButton,
+  LinearProgress,
+  Typography,
+  Popper,
+  MenuItem,
+  MenuList,
+  Card,
+} from "@mui/material";
+import useWindowScrollPositions from "../hooks/useWindowScrollPositions";
+import Avatar from "@mui/material/Avatar";
+import Stack from "@mui/material/Stack";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import ChatOutlinedIcon from "@mui/icons-material/ChatOutlined";
+import ShareOutlinedIcon from "@mui/icons-material/ShareOutlined";
+import BookmarkAddedOutlinedIcon from "@mui/icons-material/BookmarkAddedOutlined";
+import im from "../asset/background.png";
+import MoreHorizOutlinedIcon from "@mui/icons-material/MoreHorizOutlined";
+import Instagram from "@mui/icons-material/Instagram";
+import YouTube from "@mui/icons-material/YouTube";
+import Twitter from "@mui/icons-material/Twitter";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
+import MarkChatUnreadOutlinedIcon from "@mui/icons-material/MarkChatUnreadOutlined";
+import HideSourceIcon from "@mui/icons-material/HideSource";
+import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
+import G from "../components/Grid";
+import { Divider } from "@mui/material";
+import img1 from "../asset/avatar.jpg";
+import img2 from "../asset/Kevin_De_Bruyne.jpg";
+import img3 from "../asset/Naymar-and-Nike-Split.jpg";
+import img4 from "../asset/Kylian_Mbappe.jpg";
+import img5 from "../asset/Lionel_Messi.jpg";
+import img6 from "../asset/Home1.jpg";
+import TextareaAutosize from "@mui/material/TextareaAutosize";
 
-//   React.useEffect(() => {
-//     let computeProgress = () => {
-//       // The scrollTop gives length of window that has been scrolled
-//       const scrolled = document.documentElement.scrollTop;
-//       // scrollHeight gives total length of the window and
-//       // The clientHeight gives the length of viewport
-//       const scrollLength =
-//         document.documentElement.scrollHeight -
-//         document.documentElement.clientHeight;
-//       const progress = `${(100 * scrolled) / scrollLength}`;
+import Dialog2 from "../components/Dialog2";
+import Selected from "../components/Selected";
+import Related_posts from "../components/Related_posts";
+import Moreauthor from "../components/Moreauthor";
+import HomePost from "../components/HomePost";
+import Pagination from "@mui/material/Pagination";
+import Topic from "../components/Topic";
+import SlideShow from "../components/SlideShow";
 
-//       setProgress(progress);
-//     };
+import img12 from "../asset/img12.webp";
+import img13 from "../asset/img13.webp";
+import img14 from "../asset/img14.jpg";
+import img15 from "../asset/img15.png";
+import img16 from "../asset/img16.jpg";
+import img17 from "../asset/img17.jpg";
+import img18 from "../asset/img18.png";
+import img19 from "../asset/img19.png";
+import img20 from "../asset/img20.jpg";
+import img21 from "../asset/img21.jpg";
+import img22 from "../asset/img22.jpg";
+import img23 from "../asset/img23.jpg";
+import img24 from "../asset/img24.png";
+import img25 from "../asset/img25.png";
+import img26 from "../asset/img26.webp";
+import img27 from "../asset/img27.webp";
+import img28 from "../asset/img28.jpg";
+import img29 from "../asset/img29.jpg";
+import img30 from "../asset/img30.webp";
+import img31 from "../asset/img31.jpg";
+import img32 from "../asset/img32.jpg";
+import img33 from "../asset/img33.png";
+import img34 from "../asset/img34.jpg";
+import Newsletters from "../components/Newsletters";
+import Dialog1 from "../components/Dialog1";
 
-//     // Adding event listener on mounting
-//     window.addEventListener("scroll", computeProgress);
+const dataTop = [
+  { url: img21, url1: img1,name:"Ronaldo" },
+  { url: img22, url1: img2,name:"De Bruyne" },
+  { url: img24, url1: img3,name:"Neymar" },
+  { url: img30, url1: img4,name:"Mbappé" },
+  { url: img29, url1: img5,name:"Messi" },
+  { url: img33, url1: img13,name:"Kendavis" },
+  { url: img26, url1: img12,name:"Drew" },
+];
 
-//     // Removing event listener upon unmounting
-//     return () => window.removeEventListener("scroll", computeProgress);
-//   });
+const Home = () => {
+  return (
+    <Helmet title="Home">
+      <div className="main_frame_Home">
+        <div
+          className="img_background_top"
+          style={{ backgroundImage: `url(${img6})` }}
+        >
+          <Typography className="title_background_Home">Garden</Typography>
+          <Typography className="title_background_Home1">
+            {" "}
+            13 Articles
+          </Typography>
+        </div>
 
-//   const { scrollX, scrollY } = useWindowScrollPositions();
+        <G col={2} smCol={1}>
+          <div className="frame_selected_right1">
+            <Dialog1 />
+            <Dialog2 />
+          </div>
+          <div className="frame_selected_right">
+            <Selected />
+          </div>
+        </G>
+        <div>
+          <HomePost />
+        </div>
 
-//   const [anchorEl, setAnchorEl] = useState(null);
+        <div className="frame_stack">
+          <Stack spacing={2}>
+            <Pagination
+              className="frame_stack1"
+              size="large"
+              count={5}
+              color="primary"
+            />
+          </Stack>
+        </div>
 
-//   const handleClick = (event) => {
-//     setAnchorEl(anchorEl ? null : event.currentTarget);
-//     setanchorEl1(null);
-//   };
+        <div className="frame_trending_topic">
+          <Topic />
+        </div>
+        <div className="slideShow_more_author">
+          <div className="Second_slideShow_more_author">
+            <div className="main_frame_video">
+              <Typography className="title_video_trending">
+                Top elite authors
+              </Typography>
+              <Typography className="title_video_trending1">
+                Discover over our eliter writers
+              </Typography>
+            </div>
 
-//   const open = Boolean(anchorEl);
+            <SlideShow data={dataTop} />
+          </div>
+        </div>
 
-//   const [anchorEl1, setanchorEl1] = useState(null);
+        <div className="frame_newsletter_home">
+         <Newsletters/>
 
-//   const handleClick1 = (event) => {
-//     setanchorEl1(anchorEl1 ? null : event.currentTarget);
-//     setAnchorEl(null);
-//   };
-//   const open1 = Boolean(anchorEl1);
-// // /------------------------------------------------------------------------------------------------------------------------------/ 
-//   return (
-//     <Helmet title="Home">
-//       <div style={{ height: "2000px" }}>
-//         <div className="main_frame_Postdetails">
-//           <Paper
-//             sx={{
-//               backgroundColor: "red",
-//               backgroundImage: `url(${im})`,
-//               height: "400px",
-//               backgroundRepeat: "no-repeat",
-//             }}
-//           >
-//             <div className="frame_Top_gallary">
-//               <Button className="button_gallary">Garden</Button>
-//               <Button className="button_gallary2">Jewelry</Button>
-//               <div className="frame_title_postdetail">
-//                 <Typography className="text_title_postdetail">
-//                   Quiet ingenuity: 120,000 lunches and counting
-//                 </Typography>
-//               </div>
-//               <hr
-             
-//                 className="underline_postdetail"
-//               />
-//               <div style={{ marginTop: "2%" }}>
-//                 <Stack direction="row" spacing={2} sx={{ color: "white" }}>
-//                   <Avatar alt="Remy Sharp" src={avt} />
-//                   <div className="frame_IconbuttonRight">
-//                     <div>
-//                       <Typography>Cristiano Ronaldo</Typography>
 
-//                       <Typography>May 20, 2021 · 6 min read</Typography>
-//                     </div>
+        </div>
+      </div>
+    </Helmet>
+  );
+};
 
-//                     <div className="frame_button_right">
-//                       <Button className="button_favorite">
-//                         <FavoriteIcon className="icon_favorite" />
-//                         220
-//                       </Button>
-//                       <Button className="button_chat">
-//                         <ChatOutlinedIcon className="icon_chat" />
-//                         12
-//                       </Button>
-//                       |
-//                       <IconButton
-//                         className="Button_share"
-//                         sx={{ backgroundColor: "rgba(212, 248, 255, 0.1)"  }}
-//                         onClick={handleClick}
-//                       >
-//                         <ShareOutlinedIcon
-//                           sx={{ color: "white" }}
-//                           className="icon_share"
-//                         />
-//                       </IconButton>
-//                       <Popper
-//                         open={open}
-//                         anchorEl={anchorEl}
-//                         sx={{ position: "absoluted" }}
-//                       >
-//                         <Box
-//                           sx={{
-//                             border: 1,
-//                             p: 1,
-//                             backgroundColor: "white",
-//                             width: "200px",
-//                             marginTop: "10px",
-//                             borderRadius: "10px",
-//                           }}
-//                         >
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <FacebookIcon />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Facebook{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <Twitter />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Twitter{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <Instagram />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Instagram{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                         </Box>
-//                       </Popper>
-//                       <IconButton
-//                         className="Button_share"
-//                         sx={{ backgroundColor: "rgba(212, 248, 255, 0.1)" }}
-//                       >
-//                         <BookmarkAddedOutlinedIcon
-//                           sx={{ color: "white" }}
-//                           className="icon_share"
-//                         />
-//                       </IconButton>
-//                       <IconButton
-//                         className="Button_share"
-//                         sx={{ backgroundColor: "rgba(212, 248, 255, 0.1)" }}
-//                       >
-//                         <MoreHorizOutlinedIcon
-//                           sx={{ color: "white" }}
-//                           className="icon_share"
-//                           onClick={handleClick1}
-//                         />
-//                       </IconButton>
-//                       <Popper open={open1} anchorEl={anchorEl1}>
-//                         <Box
-//                           sx={{
-//                             border: 1,
-//                             p: 1,
-//                             backgroundColor: "white",
-//                             width: "200px",
-//                             marginTop: "10px",
-//                             borderRadius: "10px",
-//                           }}
-//                         >
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <ContentCopyIcon />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Copy{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <MarkChatUnreadOutlinedIcon />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Comment this article{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <HideSourceIcon />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Hide this author{" "}
-//                             </Typography>
-//                           </MenuItem>
-
-//                           <MenuItem
-//                             sx={{ color: "black" }}
-//                             className="menuhover"
-//                           >
-//                             <FlagOutlinedIcon />
-//                             <Typography sx={{ marginLeft: "30px" }}>
-//                               {" "}
-//                               Report this article{" "}
-//                             </Typography>
-//                           </MenuItem>
-//                         </Box>
-//                       </Popper>
-//                       <div></div>
-//                     </div>
-//                   </div>
-//                 </Stack>
-//               </div>
-//             </div>
-//           </Paper>
-
-//           {/* -------------------------------------------taskbar_header--------------------------------------------------------------- */}
-
-//           <div
-//             style={{
-         
-//               display: scrollY > 400 ? "block" : "none",
-            
-//             }}
-//             className="taskbar"
-//           >
-//             <div
-//               style={{
-//                 width: "1250px",
-//                 height: "40px",
-//                 margin: "auto",
-//                 marginTop: "13px",
-//                 display: "flex",
-//               }}
-//             >
-//               <Avatar alt="Remy Sharp" src={avt} sx={{ marginLeft: "10px" }} />
-//               <div className="frame_elemet_taskbar">
-//                 <Typography className="title_taskbar">
-//                   Quiet ingenuity: 120,000 lunches and counting
-//                 </Typography>
-//               </div>
-//               <Button className="button_favorite1" sx={{marginLeft:"17%"}} >
-//                 <FavoriteIcon sx={{ color: "red" }} />
-//                 220
-//               </Button>
-              
-//               <IconButton className="Button_share1">
-//                 <ShareOutlinedIcon
-//                   sx={{ color: "white" }}
-//                   className="icon_share"
-//                   onClick={handleClick}
-//                 />
-//               </IconButton>
-//               <IconButton
-//                 // className="Button_share"
-//                 sx={{ marginLeft: "5px", marginRight: "5px" }}
-//               >
-//                 <BookmarkAddedOutlinedIcon
-//                   sx={{ color: "white" }}
-//                   className="icon_share"
-//                 />
-//               </IconButton>
-              
-//               <IconButton className="Button_share" onClick={handleClick1}>
-//                 <MoreHorizOutlinedIcon
-//                   sx={{ color: "white" }}
-//                   className="icon_share"
-//                 />
-//               </IconButton>
-
-//               <Typography sx={{color:"white",paddingTop:"3px",fontSize:"20px"}}>|</Typography>
-//               <Popper open={open1} anchorEl={anchorEl1}>
-//                 <Box
-//                   sx={{
-//                     border: 1,
-//                     p: 1,
-//                     backgroundColor: "white",
-//                     width: "250px",
-//                     marginTop: "10px",
-//                     borderRadius: "10px",
-//                   }}
-//                 >
-//                   <MenuItem sx={{ color: "black" }} className="menuhover">
-//                     <ContentCopyIcon />
-//                     <Typography sx={{ marginLeft: "30px" }}> Copy </Typography>
-//                   </MenuItem>
-//                   <MenuItem sx={{ color: "black" }} className="menuhover">
-//                     <MarkChatUnreadOutlinedIcon />
-//                     <Typography sx={{ marginLeft: "30px" }}>
-//                       {" "}
-//                       Comment this article{" "}
-//                     </Typography>
-//                   </MenuItem>
-//                   <MenuItem sx={{ color: "black" }} className="menuhover">
-//                     <HideSourceIcon />
-//                     <Typography sx={{ marginLeft: "30px" }}>
-//                       {" "}
-//                       Hide this author{" "}
-//                     </Typography>
-//                   </MenuItem>
-
-//                   <MenuItem sx={{ color: "black" }} className="menuhover">
-//                     <FlagOutlinedIcon />
-//                     <Typography sx={{ marginLeft: "30px" }}>
-//                       {" "}
-//                       Report this article{" "}
-//                     </Typography>
-//                   </MenuItem>
-//                 </Box>
-//               </Popper>
-//               <IconButton
-//                 sx={{
-//                   borderRadius: "100%",
-//                   height: "100%",
-//                   width: "40px",
-//                   color: "white",
-//                   marginLeft: "1%",
-//                   backgroundColor: "rgba(212, 248, 255, 0.1)",
-//                 }}
-//               >
-//                 {" "}
-//                 <FacebookIcon />
-//               </IconButton>
-//               <IconButton
-//                 sx={{
-//                   borderRadius: "100%",
-//                   height: "100%",
-//                   width: "40px",
-//                   color: "white",
-//                   marginLeft: "1%",
-//                   backgroundColor: "rgba(212, 248, 255, 0.1)",
-//                 }}
-//               >
-//                 {" "}
-//                 <Instagram />
-//               </IconButton>
-//               <IconButton
-//                 sx={{
-//                   borderRadius: "100%",
-//                   height: "100%",
-//                   width: "40px",
-//                   color: "white",
-//                   marginLeft: "1%",
-//                   backgroundColor: "rgba(212, 248, 255, 0.1)",
-//                 }}
-//               >
-//                 {" "}
-//                 <Twitter />
-//               </IconButton>
-//               <IconButton
-//                 sx={{
-//                   borderRadius: "100%",
-//                   height: "100%",
-//                   width: "40px",
-//                   color: "white",
-//                   marginLeft: "1%",
-//                   backgroundColor: "rgba(212, 248, 255, 0.1)",
-//                 }}
-//               >
-//                 {" "}
-//                 <YouTube />
-//               </IconButton>
-//             </div>
-
-//             <div
-//               style={{ position: "fixed", width: "100%", marginTop: "7px" }}
-//               className="frame_linear"
-//             >
-//               <LinearProgress
-//                 variant="buffer"
-//                 color="success"
-//                 value={progress}
-//                 className="linear"
-//               />
-//             </div>
-//           </div>
-
-//           <div style={{ marginTop: "600px" }}>chauhoaivu</div>
-//         </div>
-//       </div>
-//     </Helmet>
-//   );
-// };
-
-// export default Home;
+export default Home;

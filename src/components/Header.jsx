@@ -128,7 +128,7 @@ const Header = () => {
         {femmecubatorLogo}
 
         {/* menuButton */}
-        <div style={{ marginLeft: "-200px" }}>{getMenuButtons()}</div>
+        <div style={{ marginLeft: "-150px" }}>{getMenuButtons()}</div>
         {femmecubatorSigin}
       </Toolbar>
     );
@@ -330,6 +330,7 @@ const Header = () => {
                     alt="new"
                     src="https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c"
                   />
+                  
                   <p
                     style={{
                       justifyContent: "center",
@@ -435,7 +436,22 @@ const Header = () => {
                     Sea Star
                   </p>
                 </div>
-
+                
+                <IconButton
+                  className="showcolor"
+                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
+                >
+                  {" "}
+                  <Link to ="/Postdetail">
+                  <ListItemText
+                    className="showcolor"
+                    sx={{ cursor: "pointer" }}
+                  >
+                    Cocktail
+                  </ListItemText>
+                  </Link>
+                </IconButton>
+               
                 <IconButton
                   className="showcolor"
                   sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
@@ -445,7 +461,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                   Sound show
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -457,7 +473,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Baseball
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -469,32 +485,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
-                  </ListItemText>
-                </IconButton>
-                <IconButton
-                  className="showcolor"
-                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
-                >
-                  {" "}
-                  <ListItemText
-                    className="showcolor"
-                    sx={{ cursor: "pointer" }}
-                  >
-                    chauhoaivu
-                  </ListItemText>
-                </IconButton>
-
-                <IconButton
-                  className="showcolor"
-                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
-                >
-                  {" "}
-                  <ListItemText
-                    className="showcolor"
-                    sx={{ cursor: "pointer" }}
-                  >
-                    chauhoaivu
+                     Octopus
                   </ListItemText>
                 </IconButton>
 
@@ -507,7 +498,20 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Milkshake
+                  </ListItemText>
+                </IconButton>
+
+                <IconButton
+                  className="showcolor"
+                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
+                >
+                  {" "}
+                  <ListItemText
+                    className="showcolor"
+                    sx={{ cursor: "pointer" }}
+                  >
+                    Music alpha
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -519,7 +523,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Golf Ball
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -531,7 +535,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Salmon
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -543,7 +547,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                     Champagne
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -555,7 +559,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                   Rockers
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -567,7 +571,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                   Tennis Ball
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -579,7 +583,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Shrimps
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -591,7 +595,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Liquor
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -603,7 +607,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Soul slayer
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -615,7 +619,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Wiffleball
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -627,7 +631,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Lobster
                   </ListItemText>
                 </IconButton>
               </G>
@@ -648,16 +652,24 @@ const Header = () => {
             <MenuList className="frame_list">
               <G col={2}>
                 <ListItemText className="showcolor" sx={{ cursor: "pointer" }}>
-                  chauhoaivu
+                  <Link to ="/">
+                Home News
+                </Link>
                 </ListItemText>
                 <ListItemText className="showcolor" sx={{ cursor: "pointer" }}>
-                  chauhoaivu
+                <Link to ="/">
+                Home Demo 1
+                </Link>
                 </ListItemText>
                 <ListItemText className="showcolor" sx={{ cursor: "pointer" }}>
-                  chauhoaivu
+                <Link to ="/">
+                Update
+                </Link>
                 </ListItemText>
                 <ListItemText className="showcolor" sx={{ cursor: "pointer" }}>
-                  TranTrieuTuan
+                <Link to ="/">
+                  Home Demo 2
+                  </Link>
                 </ListItemText>
               </G>
             </MenuList>
@@ -748,7 +760,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Pizza
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -760,7 +772,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Soft Drink
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -772,7 +784,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Sandwich
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -784,20 +796,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
-                  </ListItemText>
-                </IconButton>
-
-                <IconButton
-                  className="showcolor"
-                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
-                >
-                  {" "}
-                  <ListItemText
-                    className="showcolor"
-                    sx={{ cursor: "pointer" }}
-                  >
-                    chauhoaivu
+                    Soda
                   </ListItemText>
                 </IconButton>
 
@@ -810,7 +809,20 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Taco
+                  </ListItemText>
+                </IconButton>
+
+                <IconButton
+                  className="showcolor"
+                  sx={{ borderRadius: "10px", height: "40px", width: "100px" }}
+                >
+                  {" "}
+                  <ListItemText
+                    className="showcolor"
+                    sx={{ cursor: "pointer" }}
+                  >
+                    Tea
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -822,7 +834,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    Donuts
                   </ListItemText>
                 </IconButton>
                 <IconButton
@@ -834,7 +846,7 @@ const Header = () => {
                     className="showcolor"
                     sx={{ cursor: "pointer" }}
                   >
-                    chauhoaivu
+                    milktea
                   </ListItemText>
                 </IconButton>
               </G>
