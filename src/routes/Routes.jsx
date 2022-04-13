@@ -6,15 +6,14 @@ import SignUp from "../pages/SignUp";
 import Forgotpass from "../pages/Forgotpass";
 import Postdetail from "../pages/Postdetail";
 
-
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/login"  component={Login}/>
-      <Route path="/SignUp"  component={SignUp}/>
-      <Route path="/Forgotpass"  component={Forgotpass}/>
-      <Route path="/" exact component={Home}/>
-      <Route path="/Postdetail" exact component={Postdetail}/>
+      <Route path="/login" component={Login} />
+      <Route path="/SignUp" component={SignUp} />
+      <Route path="/Forgotpass" component={Forgotpass} />
+      <Route path="/" exact component={Home} />
+      <Route path="/Postdetail" exact component={Postdetail} />
     </Switch>
   );
 };

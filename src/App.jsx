@@ -4,7 +4,8 @@ import Routes from "./routes/Routes";
 import Footer from './components/Footer'
 import Header from "./components/Header";
 
-const App = () => {
+
+const App = props => {
   return (
     <BrowserRouter>
       <Route
@@ -13,6 +14,7 @@ const App = () => {
             <Header  />
             <div className="container">
               <div className="main">
+              
                 <Routes />
               </div>
             </div>

@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import Helmet from "../components/Helmet";
-import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { TextField } from "@mui/material";
-
 import { Button, Typography } from "@mui/material";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { Link } from "react-router-dom";
+import { PropTypes } from "prop-types";
 
-const Login = () => {
+// import action redux
+import loginRequest from "../redux/login/actions";
+import { connect } from "react-redux";
+
+const Login = (props) => {
+  const [field, setField] = useState({});
+
+  const onChangeHandler = (e) => {
+    setField({ ...field, [e.target.name]: e.target.value });
+  };
+  console.log("email and pass", field);
+
+  const handleSubmit = () => {
+    props.loginRequest(field);
+    console.log("value", field);
+  };
+
   return (
     <Helmet title="Login">
       <div className="main_frame_login">
@@ -92,6 +107,7 @@ const Login = () => {
                 </div>
 
                 {/*-_________________________________________________________ textfield______________________________________________________  */}
+
                 <div style={{ textAlign: "left", marginTop: "30px" }}>
                   <Typography
                     sx={{
@@ -107,6 +123,9 @@ const Login = () => {
                     className="inputtextcricle"
                     fullWidth
                     placeholder="chauhoaivu111@gmail.com"
+                    onChange={onChangeHandler}
+                    value={field.email}
+                    name="email"
                   ></TextField>
 
                   <div
@@ -152,12 +171,17 @@ const Login = () => {
                     sx={{ display: "block", marginBottom: "30px" }}
                     className="inputtextcricle"
                     fullWidth
+                    onChange={onChangeHandler}
+                    name="password"
+                    value={field.password}
                   ></TextField>
 
                   <Button
-                  
+                    variant="contained"
                     className="button_login"
                     fullWidth
+                    type="submit"
+                    onClick={handleSubmit}
                   >
                     Continue
                   </Button>
@@ -193,4 +217,23 @@ const Login = () => {
   );
 };
 
-export default Login;
+Login.propTypes = {
+  handleSubmit: PropTypes.func,
+  loginRequest: PropTypes.func,
+  requesting: PropTypes.bool,
+  succesfull: PropTypes.bool,
+  messages: PropTypes.array,
+  errors: PropTypes.array,
+};
+
+const mapStateToprops = (state) => ({
+  requesting: state.requesting,
+  successful: state.successful,
+  messages: state.messages,
+  errors: state.errors,
+});
+
+export default connect(mapStateToprops, {
+  loginRequest,
+})(Login);
+
